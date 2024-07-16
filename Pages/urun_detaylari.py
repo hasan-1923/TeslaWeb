@@ -16,12 +16,15 @@ MegaPack="https://www.tesla.com/tr_tr/megapack"   # Ürün MegaPack url
 @pytest.mark.usefixtures("setup")
 class urun_detaylari_:
     def __init__(self,driver):
-        self.driver = driver
+        self.driver=driver
+        
+        
         self.folderPath = str(date.today())
         Path(self.folderPath).mkdir(exist_ok=True)
     def modelS_page_doğrulama_url(self):
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".tcl-hero__subcopy-desktop")))
         Url=self.driver.current_url
+
         print("Sayfa URL'i:"+Url)
         assert S==Url  #Url ile sayfa doğrulama
     def modelS_page_ekran_görüntüsü_al(self):
