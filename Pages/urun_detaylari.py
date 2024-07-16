@@ -22,23 +22,27 @@ class urun_detaylari_:
     def modelS_page_doğrulama_url(self):
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".tcl-hero__subcopy-desktop")))
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert S==Url  #Url ile sayfa doğrulama
     def modelS_page_ekran_görüntüsü_al(self):
         self.driver.save_screenshot(f"{self.folderPath}/test-Model-S.png")
     def model3_page_doğrulama_url(self):
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".tcl-hero__content-end")))
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert E==Url #Url ile sayfa doğrulama
     def model3_page_ekran_görüntüsü_al(self):
         self.driver.save_screenshot(f"{self.folderPath}/test-Model-3.png")
     def modelX_page_doğrulama_url(self):
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert X==Url   #Url ile sayfa doğrulama
     def modelX_page_ekran_görüntüsü_al(self):
         time.sleep(2)
         self.driver.save_screenshot(f"{self.folderPath}/test-Model-X.png")
     def modelY_page_doğrulama_url(self):
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert Y==Url   #Url ile sayfa doğrulama  
     def modelY_page_ekran_görüntüsü(self):
         time.sleep(3)
@@ -47,6 +51,7 @@ class urun_detaylari_:
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".dx-hero-content svg")))
         time.sleep(1)
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert CYBER==Url #Url ile sayfa doğrulama
     def model_CyberTruck_ekran_görüntüsü_al(self):
         time.sleep(2)
@@ -55,6 +60,7 @@ class urun_detaylari_:
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".tcl-hero__content-end")))
         time.sleep(1)
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert Roadster==Url #Url ile sayfa doğrulama
     def model_Roadster_ekran_görüntüsü_al(self):
         time.sleep(2)
@@ -63,6 +69,7 @@ class urun_detaylari_:
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".tcl-hero__content-end")))
         time.sleep(1)
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert Powerwall==Url #Url ile sayfa doğrulama
     def Urun_Powerwall_ekran_görüntüsü_al(self):
         time.sleep(2)
@@ -71,6 +78,7 @@ class urun_detaylari_:
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".tcl-hero__content-end")))
         time.sleep(1)
         Url=self.driver.current_url
+        print("Sayfa URL'i:"+Url)
         assert MegaPack==Url #Url ile sayfa doğrulama
     def Urun_MegaPack_ekran_görüntüsü_al(self):
         time.sleep(2)

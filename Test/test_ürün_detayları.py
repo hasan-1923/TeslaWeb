@@ -1,6 +1,5 @@
 import pytest
 import time
-
 from Pages.anasayfa import Anasayfa
 from Pages.urun_detaylari import urun_detaylari_
 
